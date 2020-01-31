@@ -1,0 +1,26 @@
+body{
+    background-image: url(https://images.fineartamerica.com/images-medium-large-5/abstract-stylish-texture-repeating-background-with-chaotic-ornament-vector-seamless-pattern-for-design-mademoiselle-de-erotic.jpg);
+}
+.flex {
+    display:flex;
+        flex-wrap:  wrap ;
+        position: relative;
+    border: 2px solid black;
+    background-color: rgba(250, 246, 246, 0.788);
+      }
+
+    .flex div{
+        border: 2px solid black;
+        
+    }
+    fieldset {
+        padding-bottom: 190px;
+        
+    }
+    div {
+        vertical-align:middle;
+    }
+    .thirddiv { 
+        position: relative;   
+    }
+    
