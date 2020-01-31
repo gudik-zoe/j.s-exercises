@@ -26,19 +26,26 @@
 // ${country}`
 //  alert(newAdress)
  
-const fullName = `name and surename: 
+const fullName =`name and surename: 
 Antoine Khoury`;
 const myStudies = `studies: 
 physics and math`;
 const workExperience = `work experience: 
 teaching , restaurant services`
 const languageSkills = `language skills:
- english italian french & spanish`
+english italian french & spanish`
+const hobbies = `hobbies:
+rubic cubes
+bascketball
+swimming`
 const cvResult = `${fullName}
 ${myStudies} 
 ${workExperience}
-${languageSkills}`
-alert(cvResult)
+${languageSkills}
+${hobbies}`
+
+console.log('here is the CV' + '\n' + cvResult)
+
 
 
 
