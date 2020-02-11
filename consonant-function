@@ -1,0 +1,11 @@
+
+ function detector (n){
+     let str = '' ;
+ for (i = 0 ; i < n.length ; i++){
+     if (String(n[i]) !== 'a' && String(n[i]) !== 'e'&& String(n[i]) !== 'o' && String(n[i]) !== 'u' && String(n[i]) !== 'i' ){
+         str += String(n[i])
+        
+     }
+ }
+ console.log(str)
+ }
