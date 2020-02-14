@@ -1,9 +1,13 @@
-let firstName = 'antoine'  ;
-let lastName = 'khoury' ;
+
+let firstName = 'sas';
+let name = firstName.toUpperCase();
+
+let lastName ='ghani';
+let sureName = lastName.toUpperCase();
 function firstvocal(m){
     let string ='';
-    for (i = 0 ; i<m.length ; i++){
-        if (String(m[i]) == 'a' || String(m[i]) == 'e' || String(m[i]) == 'o' || String(m[i]) == 'u' || String(m[i]) == 'i' ){
+    for (let i = 0 ; i<m.length ; i++){
+        if (String(m[i]) == 'A' || String(m[i]) == 'E' || String(m[i]) == 'O' || String(m[i]) == 'U' || String(m[i]) == 'I' ){
             string += String(m[i]) 
          }
     }
@@ -12,52 +16,74 @@ function firstvocal(m){
 
 function secondvocal(b){
     let line ='';
-    for (i = 0 ; i<b.length ; i++){
-        if (String(b[i]) == 'a' || String(b[i]) == 'e' || String(b[i]) == 'o' || String(b[i]) == 'u' || String(b[i]) == 'i' ){
+    for (let i = 0 ; i<b.length ; i++){
+        if (String(b[i]) == 'A' || String(b[i]) == 'E' || String(b[i]) == 'O' || String(b[i]) == 'U' || String(b[i]) == 'I' ){
             line += String(b[i]) 
          }
     }
    return(line[1])
 }
 
-
-
-
  function check (n) {
     let str = '';
-    for ( i = 0 ; i< n.length ; i++ ){
-        if (String(n[i]) !== 'a' && String(n[i]) !== 'e'&& String(n[i]) !== 'o' && String(n[i]) !== 'u' && String(n[i]) !== 'i' ){
+    for (let i = 0 ; i< n.length ; i++ ){
+        if (String(n[i]) !== 'A' && String(n[i]) !== 'E'&& String(n[i]) !== 'O' && String(n[i]) !== 'U' && String(n[i]) !== 'I'&& String(n[i]) !== ' ' ){
            str += String(n[i]) 
         }
     }
 
-    if (str.length == 1){
+    if (str.length == 1 ){
         return(str + firstvocal(n)+secondvocal(n))
     }
-
-   else  if (str.length == 2 ){
-        return(str + firstvocal(n))
+    else if (str.length == 4  && str[1] == str[2] && str[0] !== str[1]){
+        return (str[0]+str[2]+str[3])
     }
-    else if (str.length == 3){
+else if (n.length == 3 && str.length == 2 && )
+   
+    else if (str.length == 2 && str[0] === str[1]){
+        return(str[0]+ firstvocal(n)+'X')
+    }
+    else if (str.length == 3 && str[0] === str[1] && str[1]=== str[2]){
+        return (str[0]+firstvocal(n)+str[1])
+    }
+    else if (str.length == 3 && str[0] == str[1]){
+        return (str[0]+str[2]+firstvocal(n))
+    }
+ 
+    else if ( str.length == 3 && str[0] !== str[1]){
         return(str)
    }
-   else if (str.length > 3){
+  
+  
+
+   else if (str.length > 3 && str[0] != str[1]){
        return(str[0]+str[1]+str[2])
    }
+   else if (str.length > 3 && str[0] === str[1] && str[1] !== str[2]){
+       return (str[0]+ str[2]+ str[3])
+   }
+   
    
 }
-let year =  1994 ;
-styear= String(year);
+let year =  1995 ;
+let styear= String(year);
 
 let sex = 'm' ;
-let dayOfBirth = 10  ;
+let dayOfBirth = '10'  ;
 if (sex === 'f'){
      dayOfBirth += 40;
 }
 else if (sex === 'm'){
-     dayOfBirth = dayOfBirth
+     dayOfBirth == dayOfBirth
 }
 
+let countryOfBirth = 'syria';
+if (countryOfBirth !== 'italy'){
+   var  cob = 'Z' 
+}
+else if (countryOfBirth == 'italy'){
+  var  cob = 'I'
+}
 
 
 let month = 'january' ;
@@ -102,7 +128,9 @@ else if (month ==='october'){
      month ='T'
  }
 
-let comune = 'Z240' ; // a letter and a 3 digits number
+
+let comune = cob +'240' ; // a letter and a 3 digits number
 let codiceControllo = 'Q'  ; // a letter
 
-console.log (check(lastName) + check(firstName) + styear[2]+ styear[3]+  month + dayOfBirth + comune + codiceControllo)
+ console.log (check(sureName) + check(name) + styear[2]+ styear[3]+  month + dayOfBirth + comune + codiceControllo)
+ 
